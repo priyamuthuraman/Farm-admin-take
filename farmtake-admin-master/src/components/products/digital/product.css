@@ -1,0 +1,25 @@
+.range-slider-input {
+           width: 100%;
+           height: 4px;
+           outline: none;
+           appearance: none;
+           background-color: #F48521;
+           accent-color: #cfbdae;
+           cursor: pointer;
+           outline: none;
+           border-radius: 10%;
+
+}
+
+.range-slider-input::-webkit-slider-thumb {
+
+           background-color: white;
+           appearance: none;
+           width: 1.5rem;
+           height: 1.5rem;
+           cursor: ew-resize;
+           border: 1px solid #F48521;
+           border-radius: 100%;
+}
+
+/* f48521 */

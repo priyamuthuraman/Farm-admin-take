@@ -1,0 +1,30 @@
+ul.pagination {
+           width: 400px;
+           display: flex;
+           justify-content: space-evenly;
+
+}
+
+.pagination-main {
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+}
+
+ul.pagination .selected {
+           color: orange;
+}
+
+ul.pagination li.previous a {
+           text-decoration: none;
+}
+
+ul.pagination li.next a {
+           text-decoration: none;
+}
+
+ul.pagination li:hover {
+           scale: 1.5;
+
+}

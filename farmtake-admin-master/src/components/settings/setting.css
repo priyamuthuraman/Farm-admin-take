@@ -1,0 +1,40 @@
+.profile_container {
+           width: 100%;
+           height: 100px;
+           display: flex;
+           justify-content: center;
+
+
+}
+
+.profile_container .profile_img_container {
+           max-width: 100px;
+           position: relative;
+           overflow: hidden;
+}
+
+.profile_container .profile_img_container input[type="file"] {
+           position: absolute;
+           bottom: 0px;
+           left: 0px;
+           scale: 5;
+           transform-origin: right;
+           cursor: pointer;
+           opacity: 0;
+}
+
+.profile_img_container::before {
+           content: "upload";
+           color: whitesmoke;
+           display: flex;
+           font-weight: 500;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           height: 100%;
+           bottom: 0;
+           position: absolute;
+           background-color: rgba(0, 0, 0, 0.178);
+           border-radius: 100%;
+
+}
