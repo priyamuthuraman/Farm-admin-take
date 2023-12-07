@@ -17,10 +17,12 @@ export const retail_excel_columns = (object) => {
     }
     return tmp;
   } catch (error) {
+    throw new Error(error.message)
     return [];
   }
-};
+ 
 
+};
 export const wholesale_excel_columns = (object) => {
   let tmp = [];
   try {

@@ -77,7 +77,6 @@ const Orders = () => {
                   paginationPerPage={10}
                   pagination={true}
                   expandOnRowClicked={true}
-                  
                 />
                 
               </CardBody>

@@ -1,4 +1,6 @@
+
 import moment from "moment";
+
 import {
   GetInvoiceUrl,
   rootUrl,
@@ -6,8 +8,19 @@ import {
 } from "../service/api.url";
 import axiosDefault from "../service/api.config";
 import { toast } from "react-toastify";
-
+import { Link } from "react-router-dom";
+// import html2canvas from "html2canvas";
+// import jsPDF from "jspdf"
+// import { useRef } from "react";
+// const pdfRef =useRef();
+// const downloadpdf=()=>{
+//     const input=pdfRef.current;
+//     html2canvas(input).then(()=>{
+//         const pdf=new jsPDF();
+//         pdf.save('priya.pdf')
+//     })}
 const status = [
+
   {
     id: 1007,
     generic_name: "Pending",
@@ -24,7 +37,10 @@ const status = [
   },
 ];
 
+
+
 export const order_columns = [
+  
   {
     name: "id",
     selector: (row, index) => {
@@ -79,7 +95,7 @@ export const order_columns = [
 
       return (
         <>
-          {product?.map((prod, i) => {
+          {product?.map((prod, i) => {  
             return <img width={40} src={rootUrl + prod?.orginal_image} />;
           })}
         </>
@@ -151,10 +167,10 @@ export const order_columns = [
   {
     name: "Total price",
     selector: (row, index) => {
-      let product = row.ordered_products;
+      let product = row.ordered_product
       let total = 0;
 
-      product.forEach((val) => {
+      product?.forEach((val) => {
         total += val.qty * val.actual_price;
       });
 
@@ -174,10 +190,16 @@ export const order_columns = [
     },
   },
   {
-    name: "export",
     
-    // Export
-
+    name: "Export",
+    selector: (row, index) => {
+     
+      return(
+       
+       <Link to={"/sales/create-order"} state={row?.sales_create_order ?? []}>
+       Export</Link>
+      )
+    },
     style: {
       textAlign: "center",
     },

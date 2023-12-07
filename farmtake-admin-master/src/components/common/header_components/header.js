@@ -101,18 +101,23 @@ const Header = () => {
               {/* <li>
                 <SearchHeader />
               </li> */}
-              <li>
+              {/* <li>
                 <a onClick={goFull} className="text-dark" >
                   <Maximize2 />
                 </a>
-              </li>
+              </li> */}
               {/* <li className="onhover-dropdown">
                 <a className="txt-dark" href="">
                   <h6>EN</h6>
                 </a>
                 <Language />
               </li> */}
-
+            
+              <li className="username">
+                <img src="https://api.farmtake.com/storage/user/2efd0f93baec411996c18b085c7c425f.jpeg"/>
+                <p>MUTHU</p>
+              </li>
+            
               <li className="onhover-dropdown">
                 <Bell />
                 <span className="badge rounded-pill badge-primary pull-right notification-badge">
